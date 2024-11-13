@@ -14,6 +14,7 @@ use std::str::FromStr;
 fn main() {
     // Define a vector to store the command-line arguments
     let mut numbers = Vec::new();
+    //Java :  List<String> strings = new ArrayList<>();
 
     // Iterate over the command-line arguments
     for arg in env::args().skip(1) {
