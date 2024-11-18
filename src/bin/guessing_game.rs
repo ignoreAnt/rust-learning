@@ -1,12 +1,29 @@
 use rand::Rng;  // Importing the random number generator trait
 use std::cmp::Ordering; // Importing the Ordering enum for comparisons
-use std::io;  // Importing input/output functionality
+use std::io;
+use rand::rngs::ThreadRng;
+// Importing input/output functionality
 
+/// A number guessing game.
+///
+/// The game will generate a random number between 1 and 100,
+/// and the user will have to guess the number.
+///
+/// The user will be prompted to input a number, and the game
+/// will continue to prompt the user until the correct number
+/// is guessed.
+///
+/// The game will print out hints to the user, such as "Too big!"
+/// or "Too small!" to help the user guess the correct number.
 fn main() {
-    println!("Guess the number!");
+    println!("Guess the number between 1 and 100!");
 
-    let secret_number = rand::thread_rng().gen_range(1..=100); // Generate a random number between 1 and 100
-
+    // let secret_number = rand::thread_rng().gen_range(1..=100); // Generate a random number between 1 and 100
+    // Creating a mutable variable to store the secret number
+    let mut rng = ThreadRng::default();
+    let secret_number = rng.gen_range(1..=100);
+    
+    // Loop until the user guesses the correct number
     loop {
         println!("Please input your guess.");
 

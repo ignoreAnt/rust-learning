@@ -29,6 +29,7 @@ fn main() {
 
     let mut d = numbers[0]; // `d` will hold the result
 
+    // numbers[1:]
     for m in &numbers[1..] {
         d = gcd(d, *m);
     }
