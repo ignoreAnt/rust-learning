@@ -16,7 +16,7 @@ async fn main() -> std::io::Result<()> {
     let server = HttpServer::new(|| {
         App::new()
             .route("/", web::get().to(get_index))
-            // .route("/gcd", web::post().to(post_gcd))
+            .route("/gcd", web::post().to(post_gcd))
     });
 
     println!("Starting server at http://localhost:3000..");

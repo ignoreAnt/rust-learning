@@ -20,7 +20,9 @@ fn main() {
 
     // let secret_number = rand::thread_rng().gen_range(1..=100); // Generate a random number between 1 and 100
     // Creating a mutable variable to store the secret number
-    let mut rng = ThreadRng::default();
+    
+    
+    let mut rng = ThreadRng::default(); // this should be done only once
     let secret_number = rng.gen_range(1..=100);
     
     // Loop until the user guesses the correct number
