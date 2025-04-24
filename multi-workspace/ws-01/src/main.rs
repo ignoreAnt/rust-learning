@@ -3,6 +3,10 @@ fn main() {
     let p1 = Person::new("Rupesh", 70.0, 1.75);
     let bmi = p1.get_bmi().context("Failed to calculate BMI");
     println!("Bmi for {:?} = {:?}", p1.name, bmi.unwrap_or_default());
+
+    let p2 = Person::new("xxx", 0.0, -1.2);
+    let bmi2 = p2.get_bmi().context("Failed to calculate BMI");
+    println!("Bmi for {:?} = {:?}", p2.name, bmi2.unwrap_or_default());
 }
 
 struct Person {
