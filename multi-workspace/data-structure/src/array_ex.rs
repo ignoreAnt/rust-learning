@@ -96,5 +96,8 @@ impl RGB {
 }
 
 pub fn new_color(r: u8, g: u8, b: u8) -> RGB {
+    // Problem: Define a struct Color that holds an RGB color value using a fixed-size array [u8; 3] for the red, green, and blue components. Implement a simple function to create a Color.
+    // Why Array? RGB has 3 fixed components. Embedding the array in a struct organizes the data.
+    // Concepts: Struct definition, array field within a struct, function to instantiate the struct.
     RGB { rgb: [r, g, b] }
 }
