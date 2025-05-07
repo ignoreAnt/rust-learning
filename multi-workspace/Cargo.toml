@@ -1,4 +1,4 @@
 [workspace]
-members = ["ws-01"]
+members = [ "data-structure","ws-01"]
 
 resolver = "2"
