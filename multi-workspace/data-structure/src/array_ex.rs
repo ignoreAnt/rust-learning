@@ -84,3 +84,17 @@ pub fn calc_average() {
     let avg2 = sum2 / sensor_readings.len() as f32;
     println!("Avg2 Temp: {:.2}", avg2);
 }
+
+pub struct RGB {
+    rgb: [u8; 3],
+}
+
+impl RGB {
+    pub fn print_color(&self) {
+        println!("R: {}, G: {}, B: {}", self.rgb[0], self.rgb[1], self.rgb[2]);
+    }
+}
+
+pub fn new_color(r: u8, g: u8, b: u8) -> RGB {
+    RGB { rgb: [r, g, b] }
+}
