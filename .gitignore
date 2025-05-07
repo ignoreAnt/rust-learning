@@ -1,2 +1,4 @@
 # target directory
 target/
+**/target/
+multi-workspace/target/

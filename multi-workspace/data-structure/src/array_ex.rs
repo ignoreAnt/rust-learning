@@ -58,3 +58,29 @@ enum Days {
     Saturday,
     Sunday,
 }
+
+pub fn calc_average() {
+    // Calculate Average of Fixed Sensor Readings
+    // Problem: You receive exactly 10 temperature readings from a sensor device. Store these in an array [f32; 10]. Calculate and return the average temperature.
+    // Why Array? The number of readings (10) is fixed.
+    // Concepts: Array declaration, iteration (for loop or iter()), summing elements, division, floating-point types.
+
+    let mut sensor_readings: [f32; 10] = [0.0; 10];
+    sensor_readings.fill(10.10);
+
+    println!("Sensor Readings: {:?}", sensor_readings);
+
+    let mut index = 0;
+    let mut sum: f32 = 0.0;
+    while let Some(temp) = sensor_readings.get(index) {
+        sum += temp;
+        index += 1
+    }
+
+    let avg = sum / sensor_readings.len() as f32;
+    println!("Avg Temp: {:.2}", avg);
+
+    let sum2: f32 = sensor_readings.iter().sum();
+    let avg2 = sum2 / sensor_readings.len() as f32;
+    println!("Avg2 Temp: {:.2}", avg2);
+}
