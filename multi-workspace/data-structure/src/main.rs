@@ -1,11 +1,8 @@
-mod array_ex;
+mod vector_ex;
 
 fn main() {
-    array_ex::array_scores(2, 500);
-    array_ex::while_array();
-    array_ex::days_of_week(1);
-    array_ex::calc_average();
-
-    let color = array_ex::new_color(255, 0, 0);
-    color.print_color();
+    // You can optionally experiment here.
+    vector_ex::collect_and_print_colors();
+    vector_ex::manage_shopping_list();
+    vector_ex::read_five_numbers_and_sum().unwrap();
 }
